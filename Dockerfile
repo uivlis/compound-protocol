@@ -15,7 +15,7 @@ RUN yarn install --frozen-lockfile
 ADD . /vortex-protocol
 
 ENV SADDLE_SHELL=/bin/sh
-ENV SADDLE_CONTRACTS="contracts/*.sol contracts/**/*.sol"
+ENV SADDLE_CONTRACTS="contracts/*.sol contracts/**/*.sol tests/Contracts/*.sol"
 RUN npx saddle compile
 
 CMD while :; do sleep 2073600; done
